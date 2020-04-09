@@ -20,8 +20,9 @@ pip install -r requirements.txt
 ```sh
 python TimeSIR_COVID-19.py
 ```
-### Parameters one may change/concern
+### Parameters one may changes/concerns
 * COVID-19 Dataset from different countries
+* For COVID-19 Dataset from different countries, lines 27 and 28 in the python 3 code should be deleted.
 * Orders of the two FIR filters in (12) an (13) in the paper
 * Starting day for the data training in the ridge regression
 * Other parameters in the sklearn.linear_model.Ridge of scikit-learn
