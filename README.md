@@ -1,4 +1,4 @@
-# Time-dependent_SIR_COVID-19
+# A Time-dependent SIR model for COVID-19 with Undetectable Infected Persons
 This repository provides the codes for the paper "A Time-dependent SIR model for COVID-19 with Undetectable Infected Persons" by Ping-En Lu.
 
 We have uploaded the paper to arXiv and has been published. It is available at https://arxiv.org/abs/2003.00122.
