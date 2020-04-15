@@ -38,11 +38,12 @@ python TimeSIR_COVID-19.py
 
 If the predicted result is not satisfactory, the reasons might be the following three points:
 1. First, the parameters in the ridge regression should be fine-tuned based on different datasets. GridSearchCV of the scikit-learn may help.
-2. Second, The recovering rate of other countries might not yet show a clear trend, which might be difficult to predict. One can try using a constant recovering rate of 1/30 days, which is the median recovery/death estimate by medical professionals. Also, waiting for a clear trend for the recovering rate is another way.
+2. Second, The recovering rate of other countries might not yet show a clear trend, which might be difficult to predict. One can try using a constant recovering rate of 1/30 days, which is the median recovery/death estimate by medical professionals. Also, waiting for a clear trend for the recovering rate is another way. The reasons for the low recovering rate and the unclear trend of recovering rate are the lack of specific drugs and the shortage of medical resources. Please refer to Section 6 of our paper if one would like to know more about this issue.
 3. Third, choosing a good starting day to train the ridge regression and predict is quite important because the unclear trend at the beginning can be extremely noisy.
+4. As our first model is based on the SIR model, side information and other data might not be applicable to this model. Changing to another epidemic model would help. Moreover, some analyses, like sections 3 and 4 in our paper are applicable as well.
 
 As for my point of view, the recovering rates around the world are so low and without any rising trend, except for China. However, most of the countries are doing well in controlling the transmission rate.
 
 ## Future work
 
-Note that this is a **deterministic** epidemic model based on the mean-field approximation for X(t) and R(t). Such an approximation is a result of the law of large numbers. Therefore, when X(t) and R(t) are relatively small, the mean-field approximation may not be as accurate as expected. In those cases, one might have to resort to stochastic epidemic models, such as Markov chains. We will leave it as our future work.
+Note that this is a **deterministic** epidemic model based on the mean-field approximation for X(t) and R(t). Such an approximation is a result of the law of large numbers. Therefore, when X(t) and R(t) are relatively small, the mean-field approximation may not be as accurate as expected (the end day might take very long, but only a few cases exist). In those cases, one might have to resort to stochastic epidemic models, such as Markov chains. We will leave it as our future work.
